@@ -1,0 +1,335 @@
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800&display=swap');
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1170px;
+
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Header*/
+header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+header nav {
+  position: fixed;
+  left: 30px;
+  top: 30px;
+  z-index: 10;
+}
+
+header nav a.nav-trigger {
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 11;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header nav a.nav-trigger span {
+  height: 2px;
+  width: 16px;
+  background-color: #fff;
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+header nav.nav-is-visible a.nav-trigger span {
+  background-color: transparent;
+}
+
+header nav a.nav-trigger span::before {
+  content: '';
+  height: 2px;
+  width: 16px;
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  transform: translateY(6px);
+  transition: all 0.3s ease;
+}
+
+header nav.nav-is-visible a.nav-trigger span::before {
+  transform: rotate(-45deg);
+}
+
+header nav a.nav-trigger span::after {
+  content: '';
+  height: 2px;
+  width: 16px;
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  transform: translateY(-6px);
+  transition: all 0.3s ease;
+}
+
+header nav.nav-is-visible a.nav-trigger span::before {
+  transform: rotate(45deg);
+}
+
+header nav span.stretchy-nav-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  background-color: #333333;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  display: inline-block;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 50px 0px 20px;
+  position: relative;
+  z-index: 11;
+  visibility: hidden;
+}
+
+header nav.nav-is-visible ul li a {
+  animation: nav 0.15s ease forwards;
+}
+
+header nav ul li:nth-child(2) a {
+  animation-delay: 0.1s;
+}
+
+header nav ul li:nth-child(3) a {
+  animation-delay: 0.2s;
+}
+
+header nav ul li:nth-child(4) a {
+  animation-delay: 0.3s;
+}
+
+header nav ul li:nth-child(5) a {
+  animation-delay: 0.4s;
+}
+
+@keyframes nav {
+  from {
+    opacity: 0;
+    transform: translateX(-15);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+header nav.nav-is-visible ul {
+  visibility: visible;
+}
+
+header nav ul li {
+  display: block;
+}
+
+header nav ul li a {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  height: 50px;
+  line-height: 50px;
+  transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #dda51e;
+}
+
+header nav ul li a span {
+  width: 60px;
+  text-align: center;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+header nav ul li a:hover span {
+  margin-right: 15px;
+}
+
+header nav.nav-is-visible span.stretchy-nav-bg {
+  height: 100%;
+}
+
+header nav ul li a.active {
+  color: #dda51e;
+}
+
+header nav ul li a.active span {
+  border-right: 3px solid #dda51e;
+}
+
+/* Header end*/
+
+/* Home*/
+
+.home {
+  background-image: url('images/background1.jpg');
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.home .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.home .home-content {
+  /* background-color: red; */
+  flex-basis: 100%;
+  max-width: 100%;
+  height: 100vh;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.home .home-content .pic-box {
+  /* background-color: green; */
+  flex-basis: 50%;
+  max-width: 50%;
+  padding: 0 25px 0 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.home .home-content .pic-box .pic {
+  height: 320px;
+  width: 320px;
+  background-image: url('images/about1.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border: 10px solid rgba(0, 0, 0, 0.5);
+}
+
+.home .home-content .text {
+  /* background-color: gray; */
+  flex-basis: 50%;
+  max-width: 50%;
+  padding: 0 15px;
+}
+
+.home .home-content .text h3 {
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 5px 0;
+  padding: 0;
+}
+.home .home-content .text h1 {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 5px 0px;
+  padding: 0;
+}
+.home .home-content .text h1 span {
+  font-weight: 700;
+  color: #dda51e;
+}
+
+.home .home-content .text p {
+  font-size: 16px;
+  color: #fff;
+  line-height: 30px;
+  font-weight: 400;
+  margin: 0 0 25px;
+}
+
+.home .home-content .text .home-btns .btn-bg {
+  margin-right: 20px;
+}
+
+.btn-bg {
+  background-color: #dda51e;
+  border: 1px solid #dda51e;
+  padding: 10px 30px;
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 25px;
+  transition: all 0.5s ease;
+}
+
+.btn-bg:hover {
+  background-color: transparent;
+  color: #dda51e;
+}
+
+.btn-bg span,
+.btn-link span {
+  margin-right: 8px;
+}
+
+.btn-link {
+  background-color: transparent;
+  border: 1px solid #dda51e;
+  padding: 10px 30px;
+  display: inline-block;
+  color: #dda51e;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 25px;
+  transition: all 0.5s ease;
+}
+
+.btn-link:hover {
+  background-color: #dda51e;
+  color: #fff;
+}
