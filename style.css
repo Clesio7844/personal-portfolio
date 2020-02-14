@@ -348,6 +348,7 @@ header nav ul li a.active span {
 .about {
   min-height: 100vh;
   background-color: #222;
+  padding: 0 15px 70px;
 }
 
 .about .page-title {
@@ -402,4 +403,103 @@ header nav ul li a.active span {
   width: 20px;
   background-color: #dda51e;
   height: 1px;
+}
+
+.about .personal-info {
+  /* background-color: gray; */
+  flex-basis: 100%;
+  max-width: 140%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* .imagesAbout {
+  max-width: 520px;
+  height: auto;
+} */
+.about .personal-info .img-box {
+  padding: 0 15px;
+  flex-basis: 50%;
+  max-width: 60%;
+  /* background-color: grey; */
+}
+
+.about .personal-info .img-box .pic {
+  max-width: 450px;
+  margin: 0px;
+  position: relative;
+}
+
+.about .personal-info .img-box .pic::before {
+  content: '';
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  box-sizing: border-box;
+  border: 6px solid #dda51e;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.about .personal-info .img-box .imagesAbout {
+  display: block;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.about .personal-info .info {
+  flex-basis: 50%;
+  max-width: 50%;
+  /* background-color: red; */
+
+  /* background-color: gray; */
+}
+
+.about .personal-info .info .col-6 {
+  /* background-color: gray; */
+  flex-basis: 50%;
+  max-width: 60%;
+  padding: 0 15px;
+}
+
+.about .personal-info .info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about .personal-info .info ul li {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.about .personal-info .info ul li span {
+  opacity: 0.8;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  display: inline-block;
+  white-space: nowrap;
+  font-weight: 400;
+}
+
+.about .personal-info .info .cv-btn {
+  padding: 0 15px;
+}
+.about .separator {
+  flex-basis: 100%;
+  max-width: 100%;
+  padding: 0 15px;
+
+  padding: 30px 0;
+}
+
+.about .separator .line {
+  border-bottom: 1px solid #4c4c4c;
 }
