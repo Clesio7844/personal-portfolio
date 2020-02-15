@@ -492,13 +492,84 @@ header nav ul li a.active span {
 .about .personal-info .info .cv-btn {
   padding: 0 15px;
 }
-.about .separator {
+.about div.separator {
   flex-basis: 100%;
   max-width: 100%;
   padding: 0 15px;
-  margin: 70px 0 50px;
+  margin: 80px 0 40px;
 }
 
 .about .separator .line {
   border-bottom: 1px solid #4c4c4c;
+}
+
+.about .resume {
+  /* background-color: grey; */
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.about .resume .experience {
+  flex-basis: 50%;
+  /* background-color: grey; */
+  padding: 0 15px;
+}
+
+.about .resume .section-title h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 0 40px;
+  padding: 0;
+}
+
+.about .resume .education {
+  flex-basis: 50%;
+  max-width: 50%;
+  /* background-color: grey; */
+  padding: 0 15px;
+}
+
+.about .resume .details .card h6.date {
+  font-size: 13px;
+  color: #fff;
+  opacity: 0.8;
+  font-weight: 400;
+  margin: 0;
+}
+
+.about .resume .details .card h6.date span {
+  margin-right: 8px;
+}
+
+.about .resume .details .card h4 {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 15px 0 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.about .resume .details .card h4 span.separator {
+  display: inline-block;
+  height: 2px;
+  width: 10px;
+  background-color: #555;
+  vertical-align: middle;
+  margin: 0px 8px 2px;
+}
+
+.about .resume .details .card h4 span.bold {
+  font-weight: 600;
+}
+
+.about .resume .details .card p {
+  font-size: 14px;
+  color: #fff;
+  margin: 0 0 40px;
+  line-height: 25px;
+  opacity: 0.9;
 }
