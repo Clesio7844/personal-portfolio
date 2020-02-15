@@ -511,6 +511,7 @@ header nav ul li a.active span {
 
 .about .resume .experience {
   flex-basis: 50%;
+  max-width: 50%;
   /* background-color: grey; */
   padding: 0 15px;
 }
@@ -521,7 +522,7 @@ header nav ul li a.active span {
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;
-  margin: 0 0 40px;
+  margin: 0 0 45px;
   padding: 0;
 }
 
@@ -530,6 +531,37 @@ header nav ul li a.active span {
   max-width: 50%;
   /* background-color: grey; */
   padding: 0 15px;
+}
+
+.about .resume .details .card {
+  padding-left: 45px;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.about .resume .details .card:last-child {
+  padding-bottom: 0;
+}
+
+.about .resume .details .card::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 0;
+  width: 1px;
+  background-color: #dda51e;
+  height: 100%;
+}
+
+.about .resume .details .card .circle {
+  height: 15px;
+  width: 15px;
+  border: 1px solid #dda51e;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #222;
 }
 
 .about .resume .details .card h6.date {
@@ -569,7 +601,12 @@ header nav ul li a.active span {
 .about .resume .details .card p {
   font-size: 14px;
   color: #fff;
-  margin: 0 0 40px;
+  margin: 0;
   line-height: 25px;
-  opacity: 0.9;
+  opacity: 0.8;
+}
+
+.about .skills .section-title {
+  padding: 50px 15px 0px;
+  background-color: grey;
 }
